@@ -10,5 +10,10 @@ namespace sistemasDeVentas
     public static class clsListas
     {
         public static List<string> listaVendedores = new List<string>();
+
+        public static List<string> listaProductos = new List<string>();
+
+        public static List<double> listaPrecio = new List<double>();
+
     }
 }

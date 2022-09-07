@@ -32,7 +32,7 @@
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtProducto = new System.Windows.Forms.TextBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtPrecioProducto = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnFacturacionMenu = new System.Windows.Forms.Button();
@@ -72,12 +72,12 @@
             this.txtProducto.Size = new System.Drawing.Size(134, 20);
             this.txtProducto.TabIndex = 3;
             // 
-            // txtPrecio
+            // txtPrecioProducto
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(378, 131);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(134, 20);
-            this.txtPrecio.TabIndex = 4;
+            this.txtPrecioProducto.Location = new System.Drawing.Point(378, 131);
+            this.txtPrecioProducto.Name = "txtPrecioProducto";
+            this.txtPrecioProducto.Size = new System.Drawing.Size(134, 20);
+            this.txtPrecioProducto.TabIndex = 4;
             // 
             // btnEliminar
             // 
@@ -87,6 +87,7 @@
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnGuardar
             // 
@@ -96,6 +97,7 @@
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnFacturacionMenu
             // 
@@ -103,8 +105,9 @@
             this.btnFacturacionMenu.Name = "btnFacturacionMenu";
             this.btnFacturacionMenu.Size = new System.Drawing.Size(80, 36);
             this.btnFacturacionMenu.TabIndex = 12;
-            this.btnFacturacionMenu.Text = "ir a facturacion";
+            this.btnFacturacionMenu.Text = "ir a vendedor";
             this.btnFacturacionMenu.UseVisualStyleBackColor = true;
+            this.btnFacturacionMenu.Click += new System.EventHandler(this.btnFacturacionMenu_Click);
             // 
             // frmProductos
             // 
@@ -114,13 +117,14 @@
             this.Controls.Add(this.btnFacturacionMenu);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtPrecioProducto);
             this.Controls.Add(this.txtProducto);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblProducto);
             this.Controls.Add(this.dtgProductos);
             this.Name = "frmProductos";
             this.Text = "frmProductos";
+            this.Load += new System.EventHandler(this.frmProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,7 +137,7 @@
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtProducto;
-        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtPrecioProducto;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnFacturacionMenu;

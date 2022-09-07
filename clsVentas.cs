@@ -18,4 +18,11 @@ namespace sistemasDeVentas
 
         public double Total { get; set; }
     }
+
+    public class clsProductos
+    {
+        public string Producto { get; set; }
+        public double Precio { get; set; }
+
+    }
 }

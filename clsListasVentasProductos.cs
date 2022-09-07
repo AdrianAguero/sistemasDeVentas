@@ -6,12 +6,21 @@ using System.Threading.Tasks;
 
 namespace sistemasDeVentas
 {
-    internal class clsListasVentas
+    internal class clsListasVentasProductos
     {
         public static class clsListaVentas
         {
             //creo una lista de tipo clase donde voy a guardar las ventas realizadas
             public static List<clsVentas> ventas = new List<clsVentas>();
+
+           
+
         }
+        public static class clsListaProducos
+        {
+            public static List<clsProductos> Productos = new List<clsProductos>();
+        }
+
     }
+  
 }

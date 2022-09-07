@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static sistemasDeVentas.clsListasVentas;
+using static sistemasDeVentas.clsListasVentasProductos;
 
 namespace sistemasDeVentas
 {
@@ -37,12 +37,17 @@ namespace sistemasDeVentas
             cmbVendedores.Items.Clear(); //vacío el ComboBox
             cmbVendedores.Items.AddRange(clsListas.listaVendedores.ToArray()); //cargo el ComboBox a partir de una lista
             cmbVendedores.SelectedIndex = 0; // selecciono el primer elemento del ComboBox
+
+
+            cmbProducto.Items.Clear();
+            cmbProducto.Items.AddRange(clsListas.listaProductos.ToArray());
+            cmbProducto.SelectedIndex = 0;
         }
 
         private void btnAgregarOtroVendedor_Click(object sender, EventArgs e)
         {
             frmVendedores frm = new frmVendedores();//instancio el formulario
-            frm.ShowDialog();
+            frm.Show();
             this.Hide();
             ActualizarVendedores();
         }
