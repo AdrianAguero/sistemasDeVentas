@@ -40,7 +40,7 @@ namespace sistemasDeVentas
 
 
             cmbProducto.Items.Clear();
-            cmbProducto.Items.AddRange(clsListas.listaProductos.ToArray());
+            cmbProducto.items.
             cmbProducto.SelectedIndex = 0;
         }
 

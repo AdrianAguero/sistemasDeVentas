@@ -83,18 +83,8 @@ namespace sistemasDeVentas
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("Está seguro de eliminar todos los datos?",
-                              "ELIMINAR",
-                              MessageBoxButtons.OKCancel,
-                              MessageBoxIcon.Warning,
-                              MessageBoxDefaultButton.Button2);
-
-            if (resultado == DialogResult.OK)
-            {
-                clsListas.listaProductos.Remove(dtgProductos.ToString());
-               
-
-            }
+            clsListaProducos.Productos.RemoveAt(dtgProductos.Rows.Count-1);
+            ActualizarProductos();
         }
     }
 }
