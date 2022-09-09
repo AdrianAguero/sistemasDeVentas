@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="clsListas.cs" />
     <Compile Include="clsListasVentasProductos.cs" />
+    <Compile Include="clsProductosGlobal.cs" />
     <Compile Include="clsVentas.cs" />
     <Compile Include="frmClientes.cs">
       <SubType>Form</SubType>

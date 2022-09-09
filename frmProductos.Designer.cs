@@ -42,10 +42,11 @@
             // dtgProductos
             // 
             this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgProductos.Location = new System.Drawing.Point(12, 48);
+            this.dtgProductos.Location = new System.Drawing.Point(12, 12);
             this.dtgProductos.Name = "dtgProductos";
-            this.dtgProductos.Size = new System.Drawing.Size(237, 194);
+            this.dtgProductos.Size = new System.Drawing.Size(237, 187);
             this.dtgProductos.TabIndex = 0;
+            this.dtgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellClick);
             // 
             // lblProducto
             // 
@@ -59,7 +60,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(279, 138);
+            this.lblPrecio.Location = new System.Drawing.Point(279, 104);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(37, 13);
             this.lblPrecio.TabIndex = 2;
@@ -71,17 +72,19 @@
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(134, 20);
             this.txtProducto.TabIndex = 3;
+            this.txtProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProducto_KeyPress);
             // 
             // txtPrecioProducto
             // 
-            this.txtPrecioProducto.Location = new System.Drawing.Point(378, 131);
+            this.txtPrecioProducto.Location = new System.Drawing.Point(378, 97);
             this.txtPrecioProducto.Name = "txtPrecioProducto";
             this.txtPrecioProducto.Size = new System.Drawing.Size(134, 20);
             this.txtPrecioProducto.TabIndex = 4;
+            this.txtPrecioProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioProducto_KeyPress);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(378, 206);
+            this.btnEliminar.Location = new System.Drawing.Point(378, 166);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(56, 33);
             this.btnEliminar.TabIndex = 5;
@@ -91,7 +94,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(458, 206);
+            this.btnGuardar.Location = new System.Drawing.Point(458, 166);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(54, 33);
             this.btnGuardar.TabIndex = 6;
@@ -101,7 +104,7 @@
             // 
             // btnFacturacionMenu
             // 
-            this.btnFacturacionMenu.Location = new System.Drawing.Point(282, 206);
+            this.btnFacturacionMenu.Location = new System.Drawing.Point(282, 163);
             this.btnFacturacionMenu.Name = "btnFacturacionMenu";
             this.btnFacturacionMenu.Size = new System.Drawing.Size(80, 36);
             this.btnFacturacionMenu.TabIndex = 12;
@@ -113,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 260);
+            this.ClientSize = new System.Drawing.Size(523, 210);
             this.Controls.Add(this.btnFacturacionMenu);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEliminar);

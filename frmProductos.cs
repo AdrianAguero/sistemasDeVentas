@@ -13,6 +13,8 @@ namespace sistemasDeVentas
 {
     public partial class frmProductos : Form
     {
+       
+        int ID;
         public frmProductos()
         {
             InitializeComponent();
@@ -20,6 +22,8 @@ namespace sistemasDeVentas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
+
             if(txtProducto.Text.Length > 0 & txtPrecioProducto.Text.Length> 0)
             {
                 clsListas.listaProductos.Add(txtProducto.Text);
@@ -28,7 +32,7 @@ namespace sistemasDeVentas
                 clsListas.listaPrecio.Add(Convert.ToDouble(txtPrecioProducto.Text));
                 clsListas.listaPrecio.Sort();
 
-                clsListaProducos.Productos.Add(new clsProductos()
+                clsProductosGlobal.Productos.Add(new clsProductos()
                 {
                     Producto = txtProducto.Text,
                     Precio = Convert.ToDouble(txtPrecioProducto.Text)
@@ -39,12 +43,6 @@ namespace sistemasDeVentas
                 txtPrecioProducto.Clear();
                 txtProducto.Clear();
                 txtProducto.Focus();
-
-
-
-
-
-
 
             }
             else
@@ -63,15 +61,14 @@ namespace sistemasDeVentas
         private void ActualizarProductos()
         {
             dtgProductos.DataSource = null;
-            dtgProductos.DataSource = clsListaProducos.Productos;
+            dtgProductos.DataSource = clsProductosGlobal.Productos;
         }
 
         private void frmProductos_Load(object sender, EventArgs e)
         {
             dtgProductos.RowHeadersVisible = false;
-            //Enlazo el DataGridView a una lista, de esta manera se veran reflejados los cambios en la lista
-            //en el DataGredView
-            dtgProductos.DataSource = clsListaProducos.Productos;
+           
+            ActualizarProductos();
         }
 
         private void btnFacturacionMenu_Click(object sender, EventArgs e)
@@ -83,8 +80,46 @@ namespace sistemasDeVentas
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            clsListaProducos.Productos.RemoveAt(dtgProductos.Rows.Count-1);
-            ActualizarProductos();
+            clsListas.listaPrecio.RemoveAt(ID);
+            clsListas.listaProductos.RemoveAt(ID);
+            clsProductosGlobal.Productos.RemoveAt(ID);
+          
+           ActualizarProductos();
+        }
+
+        private void dtgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ID = dtgProductos.CurrentCell.RowIndex;
+        }
+
+        private void txtProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                txtPrecioProducto.Focus();
+            }
+        }
+
+        private void txtPrecioProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+            if (e.KeyChar == 13)
+            {
+                btnGuardar.PerformClick();
+            }
+        }
+        private KeyPressEventArgs SoloNumeros(KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) | Char.IsControl(e.KeyChar) |
+                char.ToString(e.KeyChar) == ".")
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+            return e;
         }
     }
 }

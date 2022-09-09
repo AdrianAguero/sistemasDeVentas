@@ -163,7 +163,7 @@
             // 
             // btnAgregarOtroVendedor
             // 
-            this.btnAgregarOtroVendedor.Location = new System.Drawing.Point(297, 31);
+            this.btnAgregarOtroVendedor.Location = new System.Drawing.Point(297, 27);
             this.btnAgregarOtroVendedor.Name = "btnAgregarOtroVendedor";
             this.btnAgregarOtroVendedor.Size = new System.Drawing.Size(53, 21);
             this.btnAgregarOtroVendedor.TabIndex = 14;
@@ -173,9 +173,9 @@
             // 
             // btnAgregarVenta
             // 
-            this.btnAgregarVenta.Location = new System.Drawing.Point(439, 71);
+            this.btnAgregarVenta.Location = new System.Drawing.Point(423, 77);
             this.btnAgregarVenta.Name = "btnAgregarVenta";
-            this.btnAgregarVenta.Size = new System.Drawing.Size(74, 47);
+            this.btnAgregarVenta.Size = new System.Drawing.Size(91, 35);
             this.btnAgregarVenta.TabIndex = 15;
             this.btnAgregarVenta.Text = "Agregar Venta";
             this.btnAgregarVenta.UseVisualStyleBackColor = true;
@@ -185,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 336);
+            this.ClientSize = new System.Drawing.Size(543, 335);
             this.Controls.Add(this.btnAgregarVenta);
             this.Controls.Add(this.btnAgregarOtroVendedor);
             this.Controls.Add(this.txtTotal);

@@ -21,35 +21,35 @@ namespace sistemasDeVentas
         {
             frmVendedores frm = new frmVendedores();
             frm.Show();
-            this.Hide();
+           // this.Hide();
         }
 
         private void btnAltaProductosMenu_Click(object sender, EventArgs e)
         {
             frmProductos frm = new frmProductos();
             frm.Show();
-            this.Hide();
+         //   this.Hide();
         }
 
         private void btnAltaClientesMenu_Click(object sender, EventArgs e)
         {
             frmClientes frm = new frmClientes();
             frm.Show();
-            this.Hide();
+          //  this.Hide();
         }
 
         private void btnFacturacionMenu_Click(object sender, EventArgs e)
         {
             frmFacturacion frm = new frmFacturacion();
             frm.Show();
-            this.Hide();
+           // this.Hide();
         }
 
         private void btnInformesMenu_Click(object sender, EventArgs e)
         {
             frmInformes frm = new frmInformes();
             frm.Show();
-            this.Hide();
+           // this.Hide();
         }
     }
 }

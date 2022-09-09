@@ -64,6 +64,7 @@ namespace sistemasDeVentas
             if (resultado == DialogResult.OK)
             {
                 clsListas.listaVendedores.Remove(lstVendedores.SelectedValue.ToString());
+            
                 ActualizarListBox();
             }
         }
