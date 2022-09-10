@@ -44,6 +44,8 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnAgregarOtroVendedor = new System.Windows.Forms.Button();
             this.btnAgregarVenta = new System.Windows.Forms.Button();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVentas)).BeginInit();
             this.SuspendLayout();
@@ -181,11 +183,30 @@
             this.btnAgregarVenta.UseVisualStyleBackColor = true;
             this.btnAgregarVenta.Click += new System.EventHandler(this.btnAgregarVenta_Click);
             // 
+            // cmbCliente
+            // 
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(108, 56);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(170, 21);
+            this.cmbCliente.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(31, 61);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(39, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Cliente";
+            // 
             // frmFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 335);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.btnAgregarVenta);
             this.Controls.Add(this.btnAgregarOtroVendedor);
             this.Controls.Add(this.txtTotal);
@@ -230,5 +251,7 @@
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnAgregarOtroVendedor;
         private System.Windows.Forms.Button btnAgregarVenta;
+        private System.Windows.Forms.ComboBox cmbCliente;
+        private System.Windows.Forms.Label label7;
     }
 }

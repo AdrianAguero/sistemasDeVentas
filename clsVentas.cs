@@ -9,13 +9,10 @@ namespace sistemasDeVentas
     public class clsVentas
     {
         public string Vendedor { get; set; }
-
         public string Producto { get; set; }
-
+        public string Cliente { get; set; }
         public double Precio { get; set; }
-
         public int Cantidad { get; set; }
-
         public double Total { get; set; }
     }
 

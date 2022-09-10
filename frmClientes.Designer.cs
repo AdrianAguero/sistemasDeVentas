@@ -33,26 +33,27 @@
             this.lstClientes = new System.Windows.Forms.ListBox();
             this.txtClientes = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnFacturacionMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAgregarCliente
             // 
-            this.btnAgregarCliente.Location = new System.Drawing.Point(262, 208);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(241, 198);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(75, 55);
+            this.btnAgregarCliente.Size = new System.Drawing.Size(96, 65);
             this.btnAgregarCliente.TabIndex = 9;
             this.btnAgregarCliente.Text = "Agregar";
             this.btnAgregarCliente.UseVisualStyleBackColor = true;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
             // 
             // btnEliminarCliente
             // 
-            this.btnEliminarCliente.Location = new System.Drawing.Point(32, 208);
+            this.btnEliminarCliente.Location = new System.Drawing.Point(32, 198);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
-            this.btnEliminarCliente.Size = new System.Drawing.Size(75, 55);
+            this.btnEliminarCliente.Size = new System.Drawing.Size(103, 65);
             this.btnEliminarCliente.TabIndex = 8;
             this.btnEliminarCliente.Text = "Eliminar";
             this.btnEliminarCliente.UseVisualStyleBackColor = true;
+            this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
             // lstClientes
             // 
@@ -68,6 +69,7 @@
             this.txtClientes.Name = "txtClientes";
             this.txtClientes.Size = new System.Drawing.Size(169, 20);
             this.txtClientes.TabIndex = 6;
+            this.txtClientes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClientes_KeyPress);
             // 
             // label1
             // 
@@ -78,21 +80,11 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Nombre Clientes";
             // 
-            // btnFacturacionMenu
-            // 
-            this.btnFacturacionMenu.Location = new System.Drawing.Point(146, 209);
-            this.btnFacturacionMenu.Name = "btnFacturacionMenu";
-            this.btnFacturacionMenu.Size = new System.Drawing.Size(80, 54);
-            this.btnFacturacionMenu.TabIndex = 10;
-            this.btnFacturacionMenu.Text = "ir a facturacion";
-            this.btnFacturacionMenu.UseVisualStyleBackColor = true;
-            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 287);
-            this.Controls.Add(this.btnFacturacionMenu);
             this.Controls.Add(this.btnAgregarCliente);
             this.Controls.Add(this.btnEliminarCliente);
             this.Controls.Add(this.lstClientes);
@@ -100,6 +92,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmClientes";
             this.Text = "frmClientes";
+            this.Load += new System.EventHandler(this.frmClientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,6 +105,5 @@
         private System.Windows.Forms.ListBox lstClientes;
         private System.Windows.Forms.TextBox txtClientes;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnFacturacionMenu;
     }
 }

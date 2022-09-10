@@ -13,6 +13,9 @@ namespace sistemasDeVentas
 
         public static List<string> listaProductos = new List<string>();
 
+        public static List<string> listaClientes = new List<string>();
+
+
         public static List<double> listaPrecio = new List<double>();
 
     }

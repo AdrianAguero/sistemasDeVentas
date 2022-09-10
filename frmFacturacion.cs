@@ -47,7 +47,9 @@ namespace sistemasDeVentas
             cmbProducto.Items.AddRange(clsListas.listaProductos.ToArray());
             cmbProducto.SelectedIndex = 0;
 
-           
+            cmbCliente.Items.Clear();
+            cmbCliente.Items.AddRange(clsListas.listaClientes.ToArray());
+            cmbCliente.SelectedIndex = 0;
 
         }
 
@@ -82,6 +84,7 @@ namespace sistemasDeVentas
             clsListaVentas.ventas.Add(new clsVentas()
             {
                 Vendedor = cmbVendedores.Text,    //agrego vendedor
+                Cliente= cmbCliente.Text,
                 Producto = cmbProducto.Text,
                 Precio = varPrecio,
                 Cantidad = Convert.ToInt32(numericUpDown1.Text),
